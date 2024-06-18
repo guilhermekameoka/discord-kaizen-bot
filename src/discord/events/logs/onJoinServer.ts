@@ -21,7 +21,7 @@ export default new Event({
                 },
                 thumbnail: {url: memberAvatarUrl},
                 description: brBuilder(
-                    `👀 ${member} acabou de entrar no servidor`,
+                    `${member} acabou de entrar no servidor 👀`,
                     time(new Date(), "f")
                 )
             })]
