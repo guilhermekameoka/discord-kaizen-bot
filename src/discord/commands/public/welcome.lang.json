@@ -1,0 +1,14 @@
+{
+    "description": {
+        "en-US": [
+            "## Welcome var(user) to our discord server!"
+        ],
+        "pt-BR": [
+            "## Seja bem vindo var(user) ao nosso discord!"
+        ]
+    },
+    "footer": {
+        "en-US": "by var(github)",
+        "pt-BR": "por var(github)"
+    }
+}
