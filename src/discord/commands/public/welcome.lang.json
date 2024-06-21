@@ -1,10 +1,10 @@
 {
     "description": {
         "en-US": [
-            "## Welcome var(user) to our discord server!"
+            "## Welcome var(user) to our server!"
         ],
         "pt-BR": [
-            "## Seja bem vindo var(user) ao nosso discord!"
+            "## Seja bem vindo var(user) ao servidor!"
         ]
     },
     "footer": {

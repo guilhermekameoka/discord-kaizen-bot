@@ -1,7 +1,7 @@
 import { Command } from "@/discord/base";
 import { settings } from "@/settings";
 import { brBuilder, createEmbedAuthor, createRow, hexToRgb, spaceBuilder, replaceText } from "@magicyan/discord";
-import { ApplicationCommandType, ButtonBuilder, ButtonStyle, EmbedBuilder, Locale } from "discord.js";
+import { ApplicationCommandType, ButtonBuilder, ButtonStyle, EmbedBuilder, Locale} from "discord.js";
 import lang from "./welcome.lang.json";
 
 new Command({
@@ -9,11 +9,11 @@ new Command({
     dmPermission: false,
     description: "Welcome command",
     type: ApplicationCommandType.ChatInput,
-    async run(interaction) {
+    async run(interaction){
         const { user, locale } = interaction;
 
         const avaliableLocales = locale == Locale.EnglishUS || locale == Locale.PortugueseBR
-            ? locale : Locale.EnglishUS;
+        ? locale : Locale.EnglishUS;
 
         const githubProfileUrl = "https://github.com/guilhermekameoka";
 
@@ -22,24 +22,24 @@ new Command({
             color: hexToRgb(settings.colors.theme.success),
             description: brBuilder(
                 ...lang.description[avaliableLocales].map(
-                    text => replaceText(text, {
+                    text => replaceText(text, { 
                         "var(user)": user,
                     })
                 )
             ),
             footer: {
                 text: replaceText(lang.footer[avaliableLocales], {
-                    "var(github)": spaceBuilder("guilhermekameoka", githubProfileUrl)
+                    "var(github)": spaceBuilder("Guilherme Kameoka", githubProfileUrl)
                 }),
-                iconURL: githubProfileUrl + ".png",
+                iconURL: githubProfileUrl+".png",
             }
         });
 
         const row = createRow(
             // Button function on src/discord/components/example.ts
             new ButtonBuilder({
-                customId: "example-component-button",
-                label: "Example button",
+                customId: "example-component-button", 
+                label: "Example button", 
                 style: ButtonStyle.Primary
             })
         );
